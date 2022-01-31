@@ -42,6 +42,7 @@ void showCurrencyPicker({
   List<String>? currencyFilter,
   String? searchHint,
   bool showFlag = true,
+  InputDecoration? inputDecoration,
   bool showCurrencyName = true,
   bool showCurrencyCode = true,
   ScrollPhysics? physics,
