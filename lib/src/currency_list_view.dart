@@ -42,6 +42,8 @@ class CurrencyListView extends StatefulWidget {
   ///
   /// Defaults Search.
   final String? searchHint;
+  
+  final InputDecoration? inputDecoration;
 
   final ScrollController? controller;
 
@@ -63,6 +65,7 @@ class CurrencyListView extends StatefulWidget {
     this.physics,
     this.controller,
     this.theme,
+    this.inputDecoration,
   }) : super(key: key);
 
   @override
@@ -117,7 +120,7 @@ class _CurrencyListViewState extends State<CurrencyListView> {
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
           child: TextField(
             controller: _searchController,
-            decoration: InputDecoration(
+            decoration: inputDecoration ?? InputDecoration(
               labelText: widget.searchHint ?? "Search",
               hintText: widget.searchHint ?? "Search",
               prefixIcon: const Icon(Icons.search),
